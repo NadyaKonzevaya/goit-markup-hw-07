@@ -2,17 +2,17 @@
   @include sectionPadding(94px, 94px);
 }
 
-.partners-item + .partners-item {
-  margin-left: 30px;
-}
-
-.partners-item {
+.partners__item {
   width: 170px;
   height: 92px;
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
 }
 
-.partners-media-link {
+.partners__link {
   @extend %link;
+  @extend %pointer;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   justify-content: center;
@@ -23,15 +23,14 @@
   border-radius: 4px;
   color: $svg-color;
   fill: currentColor;
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+    color: $accent-color;
+  }
 }
 
-.partners-media-icon {
+.partners__icon {
   width: 106px;
   height: 60px;
-}
-
-.partners-media-link:hover,
-.partners-media-link:focus {
-  border: 1px solid $accent-color;
-  color: $accent-color;
 }

@@ -12,7 +12,7 @@
   overflow: hidden;
 }
 
-.header-nav__link, .header-contact__link, .partners-media-link, .footer-link, .logo, .media__link, .footer-media-link {
+.header-nav__link, .header-contact__link, .partners__link, .footer-link, .logo, .media__link, .footer-media-link {
   text-decoration: none;
   display: block;
   outline: none;
@@ -20,7 +20,7 @@
 
 .work__list,
 .team__list,
-.partners-list, .header-nav__list,
+.partners__list, .header-nav__list,
 .header-contact__list, .advant__list, .footer-list, .media, .footer-media-list {
   margin: 0;
   padding: 0;
@@ -40,7 +40,7 @@
   fill: currentColor;
 }
 
-.button, .media__link {
+.partners__link, .button, .media__link {
   cursor: pointer;
 }
 
@@ -61,7 +61,7 @@ body {
 
 .work__list,
 .team__list,
-.partners-list {
+.partners__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -303,16 +303,16 @@ img {
   padding-bottom: 94px;
 }
 
-.partners-item + .partners-item {
-  margin-left: 30px;
-}
-
-.partners-item {
+.partners__item {
   width: 170px;
   height: 92px;
 }
 
-.partners-media-link {
+.partners__item:not(:first-child) {
+  margin-left: 30px;
+}
+
+.partners__link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   justify-content: center;
@@ -325,15 +325,14 @@ img {
   fill: currentColor;
 }
 
-.partners-media-icon {
-  width: 106px;
-  height: 60px;
-}
-
-.partners-media-link:hover,
-.partners-media-link:focus {
+.partners__link:hover, .partners__link:focus {
   border: 1px solid #2196f3;
   color: #2196f3;
+}
+
+.partners__icon {
+  width: 106px;
+  height: 60px;
 }
 
 .footer {

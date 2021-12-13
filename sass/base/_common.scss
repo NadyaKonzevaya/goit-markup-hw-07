@@ -9,7 +9,7 @@ body {
 
 .work__list,
 .team__list,
-.partners-list {
+.partners__list {
   @extend %list;
   display: -webkit-box;
   display: -ms-flexbox;
