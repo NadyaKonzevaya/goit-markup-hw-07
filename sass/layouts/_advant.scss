@@ -1,0 +1,36 @@
+.advant {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.advant-item {
+  width: 270px;
+}
+
+.advant-item-title {
+  margin-bottom: 10px;
+  color: var(--second-color--);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.advant-item-text {
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.advant-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.thumb {
+  display: flex;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--background-btn-color--);
+  align-items: center;
+  justify-content: center;
+}
