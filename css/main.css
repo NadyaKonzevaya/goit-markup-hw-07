@@ -18,7 +18,7 @@
   outline: none;
 }
 
-.work-list,
+.work__list,
 .team-list,
 .partners-list, .header-nav__list,
 .header-contact__list, .advant__list, .footer-list, .social-media-list, .footer-media-list {
@@ -59,7 +59,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-.work-list,
+.work__list,
 .team-list,
 .partners-list {
   display: -webkit-box;
@@ -226,16 +226,16 @@ img {
   line-height: 1.71;
 }
 
-.work-item {
+.work__item {
   position: relative;
   margin-right: 30px;
 }
 
-.work-item:last-child {
+.work__item:last-child {
   margin-right: 0;
 }
 
-.work-label {
+.work__label {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -245,7 +245,7 @@ img {
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-.work-label-title {
+.work__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -563,9 +563,7 @@ img {
   margin: 0 auto;
 }
 
-.work-title,
-.team-title,
-.partners-title {
+.title {
   margin-bottom: 50px;
   color: #212121;
   font-weight: 700;
