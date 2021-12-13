@@ -18,16 +18,10 @@
   outline: none;
 }
 
-.header__container, .header-nav__list,
-.header-contact__list, .advant-container {
-  display: flex;
-  align-items: center;
-}
-
 .work-list,
 .team-list,
 .partners-list, .header-nav__list,
-.header-contact__list, .advant-container, .footer-list, .social-media-list, .footer-media-list {
+.header-contact__list, .advant__list, .footer-list, .social-media-list, .footer-media-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -50,6 +44,12 @@
   cursor: pointer;
 }
 
+.advant__thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 body {
   color: #757575;
   font-family: Roboto, sans-serif;
@@ -57,10 +57,6 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-}
-
-button {
-  border: 1px solid transparent;
 }
 
 .work-list,
@@ -98,8 +94,18 @@ img {
   border-bottom: 1px solid #ececec;
 }
 
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
 .header-nav {
   margin-left: 93px;
+}
+
+.header-nav__list,
+.header-contact__list {
+  display: flex;
 }
 
 .header-nav__item {
@@ -181,11 +187,31 @@ img {
   padding-bottom: 94px;
 }
 
-.advant-item {
+.advant__list {
+  display: flex;
+}
+
+.advant__item {
   width: 270px;
 }
 
-.advant-item-title {
+.advant__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.advant__thumb {
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+}
+
+.advant__icon {
+  display: block;
+  width: 70px;
+  height: 70px;
+}
+
+.advant__title {
   margin-bottom: 10px;
   color: #212121;
   font-weight: 700;
@@ -195,22 +221,9 @@ img {
   text-transform: uppercase;
 }
 
-.advant-item-text {
+.advant__text {
   font-size: 14px;
   line-height: 1.71;
-}
-
-.advant-item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.thumb {
-  display: flex;
-  height: 120px;
-  margin-bottom: 30px;
-  background-color: #f5f4fa;
-  align-items: center;
-  justify-content: center;
 }
 
 .work-item {
@@ -530,6 +543,7 @@ img {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  border: 1px solid transparent;
 }
 
 .hero__button {

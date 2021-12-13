@@ -3,10 +3,6 @@
   display: block;
   outline: none;
 }
-%flex {
-  display: flex;
-  align-items: center;
-}
 
 %list {
   margin: 0;
@@ -29,4 +25,10 @@
 
 %pointer {
   cursor: pointer;
+}
+
+%flexCentered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

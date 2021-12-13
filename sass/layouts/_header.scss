@@ -3,7 +3,8 @@
 }
 
 .header__container {
-  @extend %flex;
+  display: flex;
+  align-items: center;
 }
 
 .header-nav {
@@ -12,8 +13,8 @@
 
 .header-nav__list,
 .header-contact__list {
-  @extend %flex;
   @extend %list;
+  display: flex;
 }
 
 .header-nav__item {
