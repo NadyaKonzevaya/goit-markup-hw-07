@@ -17,10 +17,16 @@
   padding: 10px 32px;
 }
 
-.submit-btn {
+.form__button {
   display: flex;
   padding: 10px 28px;
   margin-left: 12px;
+}
+
+.form__icon {
+  display: block;
+  margin-left: 10px;
+  fill: currentColor;
 }
 
 .modal__button {

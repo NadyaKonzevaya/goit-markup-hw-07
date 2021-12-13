@@ -1,23 +1,16 @@
-.form-field {
-  position: relative;
+.footer__form {
+  margin-left: 93px;
 }
 
-.footer-form {
+.form {
   display: flex;
 }
 
-.email-form-label {
-  position: absolute;
-  top: 50%;
-  left: 16px;
-  transform: translateY(-50%);
-  font-size: 16px;
-  line-height: 1.25;
-  color: rgba(255, 255, 255, 0.6);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.form__field {
+  position: relative;
 }
 
-.email-form-input {
+.form__input {
   width: 358px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -27,9 +20,19 @@
   background-color: $background-color;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+  &:focus + .form__label,
+  &:not(:placeholder-shown) + .form__label {
+    transform: translateX(-80px) translateY(-50%);
+  }
 }
 
-.email-form-input:focus + .email-form-label,
-.email-form-input:not(:placeholder-shown) + .email-form-label {
-  transform: translateX(-80px) translateY(-50%);
+.form__label {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
