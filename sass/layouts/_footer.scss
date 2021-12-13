@@ -2,13 +2,14 @@
   max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
-  background-color: var(--background-color--);
+  background-color: $background-color;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
 .footer-link {
-  color: var(--third-color--);
+  @extend %link;
+  color: $third-color;
   font-style: normal;
 }
 
@@ -42,7 +43,7 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--third-color--);
+  color: $third-color;
 }
 
 .footer-interaction {

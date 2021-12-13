@@ -1,21 +1,21 @@
-span.header-logo,
-span.footer-logo {
-  color: var(--accent-color--);
-}
-a.header-logo,
-a.footer-logo {
-  color: var(--fourth-color--);
+.logo {
+  @extend %link;
+  color: $fourth-color;
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-}
-
-.header-logo {
   min-width: 145px;
 }
 
-a.footer-logo {
-  color: var(--third-color--);
+.logo--accent {
+  color: $accent-color;
+}
+
+.footer__logo {
   margin-bottom: 20px;
+}
+
+.footer__logo--white {
+  color: $third-color;
 }

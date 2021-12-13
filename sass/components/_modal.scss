@@ -18,7 +18,7 @@
   width: 528px;
   min-height: 581px;
   padding: 40px;
-  background-color: var(--third-color--);
+  background-color: $third-color;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -34,7 +34,7 @@
 
   width: 30px;
   height: 30px;
-  background-color: var(--third-color--);
+  background-color: $third-color;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
@@ -45,7 +45,7 @@
 
 .modal-close:hover .modal-close-icon,
 .modal-close:focus .modal-close-icon {
-  fill: var(--accent-color--);
+  fill: $accent-color;
 }
 
 .is-hidden {
@@ -63,7 +63,7 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
-  color: var(--second-color--);
+  color: $second-color;
   margin-bottom: 12px;
   display: block;
 }
@@ -73,7 +73,7 @@
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color: var(--main-color--);
+  color: $main-color;
 }
 
 .modal-form-input {
@@ -89,11 +89,11 @@
 .modal-form-input:focus,
 .modal-form-comment:focus {
   outline: none;
-  border: 1px solid var(--accent-color--);
+  border: 1px solid $accent-color;
 }
 
 .modal-form-input:focus + .icon-modal-form {
-  fill: var(--accent-color--);
+  fill: $accent-color;
 }
 
 .modal-form-comment {
@@ -137,7 +137,7 @@
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
-  fill: var(--second-color--);
+  fill: $second-color;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -146,7 +146,7 @@
 }
 
 .modal-label-link {
-  color: var(--accent-color--);
+  color: $accent-color;
   margin-left: 3px;
 }
 
@@ -160,7 +160,7 @@
   display: flex;
   width: 16px;
   height: 15px;
-  border: 2px solid var(--second-color--);
+  border: 2px solid $second-color;
   border-radius: 2px;
   margin-right: 8px;
   justify-content: center;
@@ -176,14 +176,14 @@
 }
 
 .icon-modal-check {
-  fill: var(--third-color--);
+  fill: $third-color;
 }
 
 .modal-form-checkbox:checked + .checkbox-label .modal-check-item {
-  background-color: var(--accent-color--);
+  background-color: $accent-color;
   border: none;
 }
 
 .modal-form-checkbox:focus + .checkbox-label .modal-check-item {
-  border-color: var(--accent-color--);
+  border-color: $accent-color;
 }
