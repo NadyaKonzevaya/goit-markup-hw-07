@@ -6,16 +6,14 @@
   font-size: 26px;
   line-height: 1.19;
   min-width: 145px;
-}
-
-.logo--accent {
-  color: $accent-color;
+  &--accent {
+    color: $accent-color;
+  }
 }
 
 .footer__logo {
   margin-bottom: 20px;
-}
-
-.footer__logo--white {
-  color: $third-color;
+  &--white {
+    color: $third-color;
+  }
 }
