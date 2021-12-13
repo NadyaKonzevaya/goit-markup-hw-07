@@ -7,10 +7,6 @@ body {
   letter-spacing: 0.03em;
 }
 
-.link.current {
-  color: $accent-color;
-}
-
 .pointer {
   cursor: pointer;
 }
@@ -22,6 +18,7 @@ button {
 .work-list,
 .team-list,
 .partners-list {
+  @extend %list;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

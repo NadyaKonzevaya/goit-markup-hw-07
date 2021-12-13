@@ -7,6 +7,10 @@
   padding-bottom: 60px;
 }
 
+.footer-list {
+  @extend %list;
+}
+
 .footer-link {
   @extend %link;
   color: $third-color;

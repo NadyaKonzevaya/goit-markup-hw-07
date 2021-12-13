@@ -2,67 +2,69 @@
   border-bottom: 1px solid #ececec;
 }
 
-.header__container,
-.header-nav-list,
-.header-contact-list,
-.advant-container {
-  display: flex;
-  align-items: center;
-}
-
-.header-nav-link,
-.header-contact-link {
-  @extend %link;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-flex;
-  align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: $second-color;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  fill: currentColor;
-}
-.header-nav-link:hover,
-.header-nav-link:focus,
-.header-contact-link:hover,
-.header-contact-link:focus {
-  color: $accent-color;
-}
-.header-contact-link {
-  color: $main-color;
-}
-
-.header-contact-list {
-  margin-left: auto;
+.header__container {
+  @extend %flex;
 }
 
 .header-nav {
   margin-left: 93px;
 }
 
-.header-nav-item:not(:last-child),
-.header-contact-item:not(:last-child) {
+.header-nav__list,
+.header-contact__list {
+  @extend %flex;
+  @extend %list;
+}
+
+.header-nav__item {
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.header-nav__link {
+  @extend %link;
+  @extend %headerLink;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  &--current {
+    color: $accent-color;
+    &::after {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: $accent-color;
+      border-radius: 2px;
+    }
+  }
+}
+
+.header-contact__list {
+  margin-left: auto;
+}
+
+.header-contact__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.icon-post,
-.icon-tel {
-  margin-right: 10px;
-}
-.header-nav-item {
-  position: relative;
+.header-contact__link {
+  @extend %link;
+  @extend %headerLink;
+  color: $main-color;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
-.current::after {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  content: '';
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: $accent-color;
-  border-radius: 2px;
+.header-contact__icon,
+.header-contact__icon {
+  margin-right: 10px;
 }

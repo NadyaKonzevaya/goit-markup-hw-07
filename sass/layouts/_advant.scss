@@ -3,6 +3,10 @@
   padding-bottom: 94px;
 }
 
+.advant-container {
+  @extend %flex;
+  @extend %list;
+}
 .advant-item {
   width: 270px;
 }
