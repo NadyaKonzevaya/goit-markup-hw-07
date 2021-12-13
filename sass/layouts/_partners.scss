@@ -1,5 +1,5 @@
 .partners {
-  padding-top: 94px;
+  @include sectionPadding(94px, 94px);
 }
 
 .partners-item + .partners-item {

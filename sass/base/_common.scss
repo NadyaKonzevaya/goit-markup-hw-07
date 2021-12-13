@@ -8,16 +8,10 @@ body {
 }
 
 .work__list,
-.team-list,
+.team__list,
 .partners-list {
   @extend %list;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.work,
-.team,
-.partners {
-  padding-bottom: 94px;
 }

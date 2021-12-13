@@ -1,3 +1,6 @@
+.work {
+  @include sectionPadding(0, 94px);
+}
 .work__item {
   position: relative;
   margin-right: 30px;

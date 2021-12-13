@@ -1,13 +1,30 @@
 .team {
+  @include sectionPadding(94px, 94px);
   max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 94px;
   background-color: $background-btn-color;
 }
 
-.team-item-title,
-.team-item-text {
+.team__item {
+  margin-right: 30px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  text-align: center;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.team__info {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team__title,
+.team__text {
   color: $second-color;
   font-weight: 500;
   font-size: 16px;
@@ -15,38 +32,11 @@
   text-align: center;
 }
 
-.team-item-text {
-  color: $main-color;
-  margin-bottom: 16px;
-}
-
-.team-item {
-  margin-right: 30px;
-  background: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-  text-align: center;
-}
-
-.team-item:last-child {
-  margin-right: 0;
-}
-
-.team-item-title {
+.team__title {
   margin-bottom: 10px;
 }
 
-.team-item-info {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.social-media-item {
-  width: 44px;
-  height: 44px;
-}
-
-.social-media-item + .social-media-item {
-  margin-left: 10px;
+.team__text {
+  color: $main-color;
+  margin-bottom: 16px;
 }
