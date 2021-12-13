@@ -3,20 +3,7 @@
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: $background-color;
-}
 
-.hero-title {
-  margin-bottom: 30px;
-  color: $third-color;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.overlay {
   min-height: 600px;
   max-width: 1600px;
   margin-right: auto;
@@ -25,5 +12,15 @@
     url(../images/hero/hero.jpg);
   background-size: cover;
   background-position: center;
-  background-color: #c4c4c4;
+}
+
+.hero__title {
+  margin-bottom: 30px;
+  color: $third-color;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }

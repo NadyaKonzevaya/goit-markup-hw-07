@@ -46,6 +46,10 @@
   fill: currentColor;
 }
 
+.button {
+  cursor: pointer;
+}
+
 body {
   color: #757575;
   font-family: Roboto, sans-serif;
@@ -53,10 +57,6 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-}
-
-.pointer {
-  cursor: pointer;
 }
 
 button {
@@ -156,9 +156,16 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: #2f303a;
+  min-height: 600px;
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
-.hero-title {
+.hero__title {
   margin-bottom: 30px;
   color: #ffffff;
   font-weight: 900;
@@ -167,17 +174,6 @@ img {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-}
-
-.overlay {
-  min-height: 600px;
-  max-width: 1600px;
-  margin-right: auto;
-  margin-left: auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero.jpg);
-  background-size: cover;
-  background-position: center;
-  background-color: #c4c4c4;
 }
 
 .advant {
@@ -524,9 +520,7 @@ img {
   color: #ffffff;
 }
 
-.hero-title-btn {
-  display: inline-block;
-  padding: 10px 32px;
+.button {
   min-width: 200px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -534,45 +528,25 @@ img {
   background-color: #2196f3;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.87;
-  align-items: center;
-  text-align: center;
+  line-height: 1.88;
   letter-spacing: 0.06em;
-  /* outline: none; */
+}
+
+.hero__button {
+  display: inline-block;
+  padding: 10px 32px;
 }
 
 .submit-btn {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 12px;
-  width: 200px;
   padding: 10px 28px;
-  background-color: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  color: #ffffff;
+  margin-left: 12px;
 }
 
-.icon-submit-btn {
+.modal__button {
   display: block;
-  margin-left: 10px;
-  fill: currentColor;
-}
-
-.form-btn-submit {
-  display: block;
-  margin: 0 auto;
-  width: 200px;
   padding: 10px 55px;
-  background-color: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  color: #ffffff;
+  margin: 0 auto;
 }
 
 .work-title,
@@ -873,5 +847,11 @@ img {
 
 .modal-form-checkbox:focus + .checkbox-label .modal-check-item {
   border-color: #2196f3;
+}
+
+.icon-submit-btn {
+  display: block;
+  margin-left: 10px;
+  fill: currentColor;
 }
 /*# sourceMappingURL=main.css.map */

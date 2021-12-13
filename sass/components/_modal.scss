@@ -14,7 +14,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-
   width: 528px;
   min-height: 581px;
   padding: 40px;
@@ -186,4 +185,10 @@
 
 .modal-form-checkbox:focus + .checkbox-label .modal-check-item {
   border-color: $accent-color;
+}
+
+.icon-submit-btn {
+  display: block;
+  margin-left: 10px;
+  fill: currentColor;
 }
