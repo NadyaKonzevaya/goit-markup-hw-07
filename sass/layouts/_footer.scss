@@ -6,8 +6,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
   &__container {
-    display: flex;
-    align-items: baseline;
+    @include flexCentered($a-i: baseline, $j-c: normal);
   }
 }
 
@@ -33,10 +32,7 @@
 
 .footer__title {
   margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
+  @include font();
   text-transform: uppercase;
   color: $third-color;
 }

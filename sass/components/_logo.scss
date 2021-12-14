@@ -2,9 +2,7 @@
   @extend %link;
   color: $fourth-color;
   font-family: Raleway;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  @include font($f-s: 26px, $l-h: 1.19);
   min-width: 145px;
   &--accent {
     color: $accent-color;

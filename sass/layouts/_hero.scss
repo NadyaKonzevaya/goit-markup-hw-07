@@ -3,7 +3,6 @@
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: $background-color;
-
   min-height: 600px;
   max-width: 1600px;
   margin-right: auto;
@@ -17,10 +16,7 @@
 .hero__title {
   margin-bottom: 30px;
   color: $third-color;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
   text-align: center;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
+  @include font($f-s: 44px, $f-w: 900, $l-h: 1.36, $l-s: 0.06em);
 }

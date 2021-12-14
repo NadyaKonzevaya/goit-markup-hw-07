@@ -26,9 +26,7 @@
 .team__title,
 .team__text {
   color: $second-color;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
+  @include font($f-s: 16px, $f-w: 500, $l-h: 1.19);
   text-align: center;
 }
 

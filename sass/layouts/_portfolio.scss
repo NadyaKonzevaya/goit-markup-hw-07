@@ -1,6 +1,5 @@
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @include sectionPadding(94px, 94px);
 }
 .portfolio-btn-list {
   display: flex;
@@ -22,10 +21,7 @@
   border-radius: 4px;
   color: $second-color;
   background-color: $background-btn-color;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.63;
+  @include font($f-s: 16px, $f-w: 500, $l-h: 1.63);
 }
 
 .portfolio-btn:hover,
@@ -66,16 +62,11 @@
 .portfolio-item-title {
   margin-bottom: 5px;
   color: $second-color;
-
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
+  @include font($f-s: 18px, $l-h: 2, $l-s: 0.06em);
 }
 
 .portfolio-item-text {
   color: $main-color;
-
   font-size: 16px;
   line-height: 1.87;
 }

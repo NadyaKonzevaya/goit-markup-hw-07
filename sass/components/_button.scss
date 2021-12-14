@@ -4,10 +4,7 @@
   border-radius: 4px;
   color: $third-color;
   background-color: $accent-color;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
+  @include font($f-s: 16px, $l-h: 1.88, $l-s: 0.06em);
   border: 1px solid transparent;
   @extend %pointer;
 }
@@ -18,7 +15,7 @@
 }
 
 .form__button {
-  display: flex;
+  @include flexCentered;
   padding: 10px 28px;
   margin-left: 12px;
 }
