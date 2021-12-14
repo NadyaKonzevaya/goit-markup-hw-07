@@ -1,18 +1,143 @@
-@charset "UTF-8";
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+*,
+::after,
+::before {
+  box-sizing: border-box;
 }
 
-.header-nav__link, .header-contact__link, .partners__link, .footer__link, .logo, .media__link {
+html {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
+hr {
+  height: 0;
+  color: inherit;
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+table {
+  text-indent: 0;
+  border-color: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+[type='button'],
+[type='reset'],
+[type='submit'],
+button {
+  -webkit-appearance: button;
+}
+
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+legend {
+  padding: 0;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+summary {
+  display: list-item;
+}
+
+.header-nav__link, .header-contact__link, .partners__link, .footer__link, .card__link, .logo, .media__link {
   text-decoration: none;
   display: block;
   outline: none;
@@ -21,7 +146,7 @@
 .work__list,
 .team__list,
 .partners__list, .header-nav__list,
-.header-contact__list, .advant__list, .footer__list, .media {
+.header-contact__list, .advant__list, .footer__list, .portfolio__list, .cardset, .media {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -40,11 +165,24 @@
   fill: currentColor;
 }
 
-.partners__link, .button, .media__link, .modal__close {
+.partners__link, .portfolio__button, .button, .media__link, .modal__close {
   cursor: pointer;
 }
 
-body {
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.body {
   color: #757575;
   font-family: Roboto, sans-serif;
   font-size: 14px;
@@ -61,17 +199,18 @@ body {
   display: flex;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.advant__text,
+.team__text,
+.hero__title,
+.title,
+.advant__title,
+.work__title,
+.team__title,
+.footer__title {
   margin: 0;
 }
 
-img {
+.img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -353,7 +492,6 @@ img {
 }
 
 .footer__link {
-  display: block;
   width: 231px;
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
@@ -378,20 +516,20 @@ img {
   padding-bottom: 94px;
 }
 
-.portfolio-btn-list {
+.portfolio__list {
   display: flex;
-  margin-bottom: 50px;
   align-items: center;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
-.portfolio-btn-item:not(last-child) {
+.portfolio__item:not(last-child) {
   margin-right: 10px;
 }
 
-.portfolio-btn {
+.portfolio__button {
+  border: 1px solid transparent;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* outline: none; */
   padding: 6px 22px;
   border-radius: 4px;
   color: #212121;
@@ -402,69 +540,45 @@ img {
   letter-spacing: 0.03em;
 }
 
-.portfolio-btn:hover,
-.portfolio-btn:focus {
+.portfolio__button:hover, .portfolio__button:focus {
   color: #ffffff;
   background-color: #2196f3;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* ------------------------------------------------------ПОРТФОЛИО-------------------------------------------------------------------- */
-.portfolio-list {
+.cardset {
   display: flex;
   flex-wrap: wrap;
 }
 
-.portfolio-item-info {
-  border: 1px solid #eeeeee;
-  padding: 20px 24px;
-  border-top: none;
-}
-
-.portfolio-item {
+.card {
   flex-basis: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
 }
 
-.portfolio-item:nth-child(3n) {
+.card:nth-child(3n) {
   margin-right: 0;
 }
 
-.portfolio-item:nth-last-child(-n + 3) {
+.card:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
 
-.portfolio-item-title {
-  margin-bottom: 5px;
-  color: #212121;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-
-.portfolio-item-text {
-  color: #757575;
-  font-size: 16px;
-  line-height: 1.87;
-}
-
-.portfolio-link {
+.card__link {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-link:hover,
-.portfolio-link:focus {
+.card__link:hover, .card__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-item-wrap {
+.card__wrap {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio-item-label {
+.card__label {
   position: absolute;
   top: 0;
   left: 0;
@@ -478,9 +592,30 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-link:hover .portfolio-item-label,
-.portfolio-link:focus .portfolio-item-label {
+.card__link:hover .card__label,
+.card__link:focus .card__label {
   transform: translateY(0);
+}
+
+.card__info {
+  border: 1px solid #eeeeee;
+  padding: 20px 24px;
+  border-top: none;
+}
+
+.card__title {
+  margin-bottom: 5px;
+  color: #212121;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.card__text {
+  color: #757575;
+  font-size: 16px;
+  line-height: 1.87;
 }
 
 .container {
@@ -794,6 +929,11 @@ img {
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+
+.modal__comment:focus, .modal__comment:focus {
+  outline: none;
+  border: 1px solid #2196f3;
 }
 
 .modal__form--agreement {

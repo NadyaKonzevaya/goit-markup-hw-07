@@ -120,6 +120,11 @@
     @include font($f-w: 400, $l-s: 0.01em);
     color: rgba(117, 117, 117, 0.5);
   }
+  &:focus,
+  &:focus {
+    outline: none;
+    border: 1px solid $accent-color;
+  }
 }
 
 .modal__form--agreement {
