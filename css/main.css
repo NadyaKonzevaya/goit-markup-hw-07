@@ -199,21 +199,17 @@ summary {
   display: flex;
 }
 
-.advant__text,
-.team__text,
-.hero__title,
-.title,
-.advant__title,
-.work__title,
-.team__title,
-.footer__title,
-.card__label,
-.card__text,
-.card__title {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
-.img {
+img {
   display: block;
   max-width: 100%;
   height: auto;
